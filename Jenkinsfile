@@ -1,13 +1,13 @@
 pipeline {
     agent any
+    tools {
+        maven 'Maven 3.8.2'
+    }
     stages {
         stage('Example Build') {
-             withMaven {
-                sh "mvn clean verify"
-             } 
             steps {
                 echo 'Hello, Maven'
-               
+                sh 'mvn -v'
             }
         }
         stage('Example Test') {
