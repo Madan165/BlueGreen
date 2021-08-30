@@ -2,10 +2,12 @@ pipeline {
     agent any
     stages {
         stage('Example Build') {
-            
+             withMaven {
+                sh "mvn clean verify"
+             } 
             steps {
                 echo 'Hello, Maven'
-                sh 'mvn --version'
+               
             }
         }
         stage('Example Test') {
