@@ -1,8 +1,8 @@
 pipeline {
     agent any
-    tools {
+    //tools {
         //maven 'Maven 3.8.2'
-    }
+    //}
     stages {
         stage('Example Build') {
             steps {
