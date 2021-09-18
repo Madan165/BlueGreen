@@ -7,14 +7,14 @@ pipeline {
         stage('Example Build') {
             steps {
                 echo 'Hello, Maven'
-                sh 'mvn -v'
+                //sh 'mvn -v'
             }
         }
         stage('Example Test') {
             
             steps {
                 echo 'Hello, JDK'
-                sh 'java -version'
+                //sh 'java -version'
             }
         }
     }
